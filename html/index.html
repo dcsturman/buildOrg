@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style type="text/css">
+  
+  .node {
+    cursor: pointer;
+  }
+
+  .overlay{
+      background-color:#EEE;
+  }
+   
+  .node circle {
+    fill: #fff;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+  }
+   
+  .node text {
+    font-size:10px; 
+    font-family:sans-serif;
+  }
+   
+  .link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1.5px;
+  }
+
+  .link-level-1 {
+      stroke: red;
+  }
+
+  .link-level-2 {
+      stroke: orange;
+  }
+
+  .link-level-3 {
+      stroke: yellow;
+  }
+
+  .link-level-4 {
+      stroke: green;
+  }
+
+  .link-level-5 {
+      stroke: blue;
+  }
+
+  .link-level-6 {
+      stroke: indigo;
+  }
+
+
+
+
+
+  .templink {
+    fill: none;
+    stroke: red;
+    stroke-width: 3px;
+  }
+
+  .ghostCircle.show{
+      display:block;
+  }
+
+  .ghostCircle, .activeDrag .ghostCircle{
+       display: none;
+  }
+
+</style>
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="dndTree.js"></script>
+<script>
+  filename = "orgchart.json";
+  treeJSON = d3.json(filename, buildTree);
+</script>
+<body>
+    <div id="tree-container"></div>
+</body>
+</html>
