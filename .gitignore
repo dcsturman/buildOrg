@@ -1,3 +1,5 @@
-coverter/orgchart.json
+*.json
+*.xls
+*.xlsx
 .idea
 html/.idea
